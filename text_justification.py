@@ -74,5 +74,5 @@ def justifyText(list_of_strings,L):
         else:
             final_result_list.append(padder(elt,L))
     return final_result_list
-print(justifyText(["This", "is", "an", "example", "of", "text", "justification"],17))
+print(justifyText(["This", "is", "an", "example", "of", "text", "justification", "and", "stay", "safe"],17))
         
