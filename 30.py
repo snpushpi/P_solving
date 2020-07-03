@@ -20,6 +20,7 @@ def findsubstring(s,words):
         count_dict[word]= count_dict.get(word, 0)+1
     l = len(words[0])
     word_number = len(words)
+    n = len(s)
     for j in range(n-l+1):
         seen_dict = {}
         i = 0
