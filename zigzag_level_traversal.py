@@ -24,12 +24,15 @@ def zigzag(root_node):
     result = []
     while level:
         add_list =[]
+        node_list =[]
         for elt in level:
-            if elt.left not None:
-                add_list.append(elt.left)
-            if elt.right not None:
-                add_list.append(elt.right)
+            if elt.left is not None:
+                add_list.append(elt.left.val)
+                node_list.append(elt.left)
+            if elt.right is not None:
+                add_list.append(elt.right.val)
+                node_list.append(elt.right)
         result.append(add_list)
-        level = add_list
+        level = node_list
     return result
 
