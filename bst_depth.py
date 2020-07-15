@@ -19,8 +19,8 @@ def mindepth(tree):
 		add_list = []
 		for elt in level:
 		    if elt.left is not None:
-			    add_list.append(elt)
-			if elt.right is not None:
+			    add_list.append(elt.left)
+		    if elt.right is not None:
 				add_list.append(elt.right)
 		level = add_list
 	return level_num-1
