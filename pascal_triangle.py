@@ -20,4 +20,3 @@ def generate(rownums):
             new_row[col]=triangle[row-1][col-1]+triangle[row-1][col]
         triangle.append(new_row)
     return triangle
-
