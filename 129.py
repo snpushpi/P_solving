@@ -21,12 +21,12 @@ class Tree():
         self.right = None
 def sumNumber(root):
     def dfs(node, sum, result):
-        if not root:
+        if not node:
             return result
         sum = 10*sum+node.val
         if not root.left and not root.right:
             result+=sum
             return result
-        return dfs(root.left, sum)+dfs(root.right, sum)
+        return dfs(root.left, sum, result )+dfs(root.right, sum, result)
     return dfs(root, 0, 0)
     
