@@ -23,7 +23,7 @@ def sumroot2leaf(root):
     result = 0
     def traverse(node, value):
         if not node:
-            return 0
+            return
         if node.left==None and node.right==None:
             result+= 2*value+node.val
         else:
