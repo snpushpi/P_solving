@@ -20,9 +20,10 @@ It is guaranteed that costs.length is even.
 def cost(Input):
     result = 0
     costs = sorted(Input, key=lambda x: x[0]-x[1])
-    for index in range(len(Input)):
+    for i in range(len(Input)):
         if i<len(Input)//2:
             result+=costs[i][0]
         else:
             result+=costs[i][1]
     return result
+print(cost([[10,20],[30,200],[400,50],[30,20]]))
