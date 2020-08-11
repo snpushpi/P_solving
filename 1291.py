@@ -28,5 +28,13 @@ def main(low,high):
     l1 = len(str(low))
     l2 = len(str(high))
     #now write a scheme for generating the sequence numbers of that length
-    return 
-print(generate(6))
+    result = []
+    for i in range(l1,l2+1):
+        temp_list = generate(i)
+        for elt in temp_list:
+            if low<=int(elt)<=high:
+                result.append(int(elt))
+            elif int(elt)>high:
+                break
+    return result
+print(main(1000,13000))
