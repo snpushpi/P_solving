@@ -13,12 +13,11 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
-def main(root):
+def main(root,k):
     if not root:
         return 0
     stack = [root]
     count, curr = 0, root
-    visited = []
     while stack:
         if curr.left:
             curr = curr.left
@@ -32,5 +31,5 @@ def main(root):
                 if node.right:
                     stack.append(node.right)
                     curr = node.right
-                    
+
     return float('-inf')
