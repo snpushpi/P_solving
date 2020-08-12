@@ -29,6 +29,7 @@ class SegmentTree():
         node.left = self.build_segment_tree(start, mid)
         node.right = self.build_segment_tree(mid+1, end)
         return node
+        
     def update(self,index,val, root=None):
         root = root or self.root
         if index<root.range[0] or index>root.range[1]:
