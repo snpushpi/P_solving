@@ -18,7 +18,7 @@ def main(n):
     mapping = {sqr:1 for sqr in sqr_list}
     for i in range(n):
         if i not in mapping:
-            mapping[i]=float('-inf')
+            mapping[i]=float('inf')
             for elt in sqr_list:
                 if i>=elt:
                     mapping[i]=min(mapping[i],1+mapping[i-elt])
